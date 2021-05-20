@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let table1 = [3, 1, 7, 9];
+      let table2 = [2, 4, 1, 9, 3];
+
+      // function tableaux(array1, array2) {
+      //   const arr = [];
+
+      //   table1.forEach((element) => {
+      //     array2.includes(arr[i]);
+      //   });
+
+      //   // Vérifier si une valeur de la table 1 existe dans table 2
+      //   for (let i = 0; i < array1.length; i++) {
+      //     if (array2.includes(array1[i]) == false) {
+      //       arr.push(array1[i]);
+      //     }
+      //   }
+      //   // Vérifier si une valeur de la table 2 existe dans table 1
+      //   for (let j = 0; j < array2.length; j++) {
+      //     if (array1.includes(array2[j]) == false) {
+      //       arr.push(array2[j]);
+      //     }
+      //   }
+      //   //
+      //   let somme = 0;
+      //   for (let i = 0; i < arr.length; i++) {
+      //     somme = somme + arr[i];
+      //   }
+      //   return somme;
+      // }
+
+      function SumElement(array1, array2) {
+        let somme = 0;
+        array1.forEach((element) => {
+          if (!array2.includes(element)) {
+            somme += element;
+          }
+        });
+        array2.forEach((element2) => {
+          if (!array1.includes(element2)) {
+            somme += element2;
+          }
+        });
+
+        return somme;
+      }
+
+      // console.log(tableaux(table1, table2));
+      console.log(SumElement(table1, table2));
+    </script>
+  </body>
+</html>
